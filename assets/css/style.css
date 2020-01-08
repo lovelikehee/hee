@@ -90,7 +90,7 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
 .sec-end .dragging {  cursor: -webkit-grabbing; cursor: grabbing;}
 .sec-end .wrap {position:relative; top:0; left: 0;  width:100%;  height:100vh; background-color: #f1f1f1; margin:0; text-transform: uppercase;}
 .sec-end #page  img{width:100%; height:auto;} 
-.col {display: -webkit-box; display: -ms-flexbox; display: flex;}
+.sec-end .col {display: -webkit-box; display: -ms-flexbox; display: flex;}
 .curtains-ready .plane { opacity: 0;}
 #pattern {display: none; }
 .page-bg {position: fixed; left: 0; top: -5%; z-index: -1; width: 100%; height: 110%; background: transparent;}
@@ -100,6 +100,7 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
 .noselect { -webkit-user-select: none;  -moz-user-select: none; -ms-user-select: none;user-select: none;}
 .no-js #page {position: static;}
 .no-js .section__nav {display: none;}
+.section:not(.current) .section__nav {pointer-events: none;}
 .no-js .section--front .title span:not(:last-child) { margin-top: 0;}
 .no-js .section--quote .quote__text span {margin-top: 0;}
 .no-js .section--quote .statue__img > img {display: none;}
@@ -247,6 +248,7 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
 
 }
 
+
 @media  screen and (max-width: 1200px) {
   .text--giant {font-size: 96px;}
   .sec-end #page .section {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: justify; -ms-flex-pack: justify;justify-content: space-between;}
@@ -259,6 +261,7 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
   .sec-end #page .section--end .cta-wrap{margin-left:20%}
 
 }
+
 
 @media screen and (max-width: 992px) {
 
@@ -274,32 +277,8 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
   .sec-end #page  .sec-end #page .section--end .cta-wrap .cta__paragraph {font-size: 22px;}
   .sec-end #page .section--end .cta-wrap .cta{max-width:350px}
   .sec-end #page .section--end .cta-wrap .cta__paragraph{font-size:22px}
-
 }
 
-@media  screen and (max-width: 480px) {
-  .sec-end .header,  .sec-end .footer {padding: 20px;}
-  .sec-end .navigation .scrollbar {width: 200px;}
-  .text--giant {font-size: 52px;}
-  .text--large { font-size: 44px;}
-  .sec-end #page .section--work .project-wrap {margin-top: 35%;}
-  .sec-end #page .section--work .project__count {bottom: calc(100% + 10px);}
-  .sec-end #page .section--work .project__meta {top: calc(100% + 30px);}
-  .sec-end #page.section--work .project__meta-title {margin-bottom: 0;font-size: 36px;}
-  .sec-end #page .section--quote .reserved-space {height: 40px;}
-  .sec-end  #page::after {opacity: .4;}
-  .sec-end  #page  .section--quote .col {width: 100%; height: 70%;}
-  .sec-end #page .section--quote .quote{padding-bottom:40px}
-  .sec-end #page .section--quote .intro-text{-webkit-transform:none;transform:none}
-  .sec-end #page .section--quote .quote__text{margin-right:auto;font-size:10vw}
-  .sec-end #page .section--quote .statue{right:50px;top:calc(100% - 150px)}
-  .sec-end #page .section--quote .statue img{height:200px}
-  .sec-end #page .section--quote .statue__text{top:130%}
-  .sec-end #page .section--quote .reserved-space{height:40px}
-  .sec-end #page .section--end .cta-wrap{display:block;margin-left:0;height:100%}
-  .sec-end #page .section--end .cta-wrap .cta{margin-top:45%}
-}
-   
 
 @media only screen and (max-width:768px){
   #cursor ,  .custom-cursor {visibility: hidden;}
@@ -313,3 +292,31 @@ footer{position:fixed; left:0; bottom:0; width:100%; background-color: #050505; 
 
 
 }
+
+@media  screen and (max-width: 480px) {
+  .sec-end .header,  .sec-end .footer {padding: 20px;}
+  .sec-end .navigation .scrollbar {width: 200px;}
+  .text--giant {font-size: 52px;}
+  .text--large { font-size: 44px;}
+  .sec-end #page .section__nav {display: none;}
+  .sec-end #page .section {padding:20px;}
+  .sec-end #page .section--front .title span:not(:last-child){font-size:14.5vw}
+  .sec-end #page .section--front .copyright>span{-webkit-transform:translate(-30%,480%) rotate(-90deg);transform:translate(-30%,480%) rotate(-90deg);font-size:24px}
+  .sec-end #page .section--work .project-wrap {margin-top: 45%;}
+  .sec-end #page .section--work .project__count {bottom: calc(100% + 10px);}
+  .sec-end #page .section--work .project__meta {top: calc(100% + 30px);}
+  .sec-end #page .section--work .project__meta-title {margin-bottom: 0;font-size: 32px; font-weight: 500;}
+  .sec-end #page .section--quote .reserved-space {height: 40px;}
+  .sec-end #page::after {opacity: .4;}
+  .sec-end #page .section--quote .col {width: 100%; height: 70%;}
+  .sec-end #page .section--quote .quote{padding-bottom:40px}
+  .sec-end #page .section--quote .intro-text{-webkit-transform:none;transform:none}
+  .sec-end #page .section--quote .quote__text{margin-right:auto;font-size:10vw}
+  .sec-end #page .section--quote .statue{right:50px;top:calc(100% - 150px)}
+  .sec-end #page .section--quote .statue img{height:200px}
+  .sec-end #page .section--quote .statue__text{top:130%}
+  .sec-end #page .section--quote .reserved-space{height:40px}
+  .sec-end #page .section--end .cta-wrap{display:block;margin-left:0;height:100%}
+  .sec-end #page .section--end .cta-wrap .cta{margin-top:45%}
+}
+   
